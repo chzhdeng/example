@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+ <root>
+<student Name="Alred" Number="8100" Age="34" Country="USA"> </student>
+<student Name="Gypsy" Number="8134" Age="27" Country="UK"> </student>
+<student Name="Dats" Number="709314" Age="52" Country="Mozambique"> </student>
+<student Name="Manhattan" Number="9047967" Age="36" Country="Sudan"></student>
+<student Name="Finlay" Number="124679" Age="24" Country="USA"> </student>
+<student Name="Yedda" Number="8098" Age="31" Country="Dubai"> </student>
+<student Name="Akashi" Number="34501" Age="41" Country="Japan"> </student>
+<student Name="Tatum" Number="9034561" Age="29" Country="Uk"> </student>
+<student Name="Will" Number="589620" Age="37" Country="China"> </student>
+</root>
