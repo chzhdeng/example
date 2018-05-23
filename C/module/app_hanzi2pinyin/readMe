@@ -1,0 +1,4 @@
+:~/github/example/C/module/app_hanzi2pinyin $ gcc hanzi_pinyin.c -o hz2py
+:~/github/example/C/module/app_hanzi2pinyin $ ./hz2py 
+Total Write Bytes = 8 
+deng|shan chao|zhao zhen 
