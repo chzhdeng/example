@@ -1,0 +1,8 @@
+ $ gcc Std_http_post.c -o Std_http_post  `curl-config  --libs`
+ $ ./Std_http_post
+
+Notes:
+$ curl-config  --libs 
+-L/usr/lib/i386-linux-gnu -lcurl
+$ which curl-config 
+/usr/bin/curl-config
