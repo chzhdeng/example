@@ -12,11 +12,11 @@ enum Curl_Name {
     receive_bodyfilename
 };
 const char * g_str[] = {
-    "nihao3.flac",
-    "/home/dengzhaozhen/ReadFile/nihao3.flac",
-    "http://www.google.com/speech-api/v1/recognize?xjerr=1&client=chromium&lang=zh-CN&maxresults=1",
+    "nihao.wav",
+    "/home/dengchaozhen/ReadFile/nihao.wav",
+    "https://www.google.com/speech-api/v2/recognize?lang=zh-CN&maxresults=12&key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw",
     "user-agent:Mozilla/5.0",
-    "Content-Type: audio/x-flac; rate=8000",
+    "Content-Type: audio/L16; rate=8000",
     "/home/dengzhaozhen/WriteFile/head.out",
     "/home/dengzhaozhen/WriteFile/body.out"
 };
@@ -38,7 +38,7 @@ int main()
     struct curl_httppost * formpost = NULL;
     struct curl_httppost * lastptr = NULL;
     struct curl_slist * http_header = NULL;
-  
+
     curl_global_init(CURL_GLOBAL_ALL);
 
     /* Fill in the file upload field */
@@ -47,19 +47,19 @@ int main()
                 CURLFORM_COPYNAME, g_str[Upload_Filename],
                 CURLFORM_FILE, g_str[Upload_File_Path],
                 CURLFORM_END);
- 
+
     curl = curl_easy_init();
     http_header = curl_slist_append(http_header, g_str[User_Agent]);
     http_header = curl_slist_append(http_header, g_str[Content_Type]);
     if(curl)
     {
-        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, http_header); 
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, http_header);
         curl_easy_setopt(curl,CURLOPT_URL, g_str[Remote_URL]);
-        //curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);  
+        curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);
         curl_easy_setopt(curl, CURLOPT_POST, 1);
         curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
-     
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);                 
+
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
         Ptr_headerfile = fopen(g_str[receive_headerfilename],"wb");
         if (Ptr_headerfile == NULL)
         {
@@ -67,12 +67,12 @@ int main()
             return -1;
         }
         Ptr_bodyfile = fopen(g_str[receive_bodyfilename],"wb");
-        if (Ptr_bodyfile == NULL) 
+        if (Ptr_bodyfile == NULL)
         {
             curl_easy_cleanup(curl);
             return -1;
         }
-        
+
         curl_easy_setopt(curl,   CURLOPT_WRITEHEADER, Ptr_headerfile);
         curl_easy_setopt(curl,   CURLOPT_WRITEDATA, Ptr_bodyfile);
 
