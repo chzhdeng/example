@@ -1,28 +1,3 @@
-/****************************************************************************
- *
- * FILENAME:        $RCSfile: mcm.h,v $
- *
- * LAST REVISION:   $Revision: 1.2 $
- * LAST MODIFIED:   $Date: 2017/11/21 09:24:42 $
- *
- * DESCRIPTION:
- *
- * vi: set ts=4:
- *
- * Copyright (c) 2012-2014 by Grandstream Networks, Inc.
- * All rights reserved.
- *
- * This material is proprietary to Grandstream Networks, Inc. and,
- * in addition to the above mentioned Copyright, may be
- * subject to protection under other intellectual property
- * regimes, including patents, trade secrets, designs and/or
- * trademarks.
- *
- * Any use of this material for any purpose, except with an
- * express license from Grandstream Networks, Inc. is strictly
- * prohibited.
- *
- ***************************************************************************/
 
 #ifndef __MCM_H__
 #define __MCM_H__

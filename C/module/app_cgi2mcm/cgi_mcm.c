@@ -1,28 +1,3 @@
-/****************************************************************************
- *
- * FILENAME:        $RCSfile: mcm.c,v $
- *
- * LAST REVISION:   $Revision: 1.0$
- * LAST MODIFIED:   $Date: 2017/11/21 13:59:32 $
- *
- * DESCRIPTION:
- *
- * vi: set ts=4:
- *
- * Copyright (c) 2013 by Grandstream Networks, Inc.
- * All rights reserved.
- *
- * This material is proprietary to Grandstream Networks, Inc. and,
- * in addition to the above mentioned Copyright, may be
- * subject to protection under other intellectual property
- * regimes, including patents, trade secrets, designs and/or
- * trademarks.
- *
- * Any use of this material for any purpose, except with an
- * express license from Grandstream Networks, Inc. is strictly
- * prohibited.
- *
- ***************************************************************************/
 #ifndef _GNU_SOURCE
     #define _GNU_SOURCE
 #endif
