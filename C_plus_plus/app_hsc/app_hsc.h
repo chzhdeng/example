@@ -1,10 +1,3 @@
-/*
- * Any use of this material for any purpose, except with an
- * express license from Grandstream Networks, Inc. is strictly
- * prohibited.
- *
- ***************************************************************************/
-
 #ifndef __APP_HSC_H__
 #define __APP_HSC_H__
 
